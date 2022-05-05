@@ -1,41 +1,31 @@
-<img src="/assets/jtbp-header-blue.png" width="1920px"/>
-
-## 🎊 April 2022 Announcement: A new edition was just released with 5 new best practices, many more code examples and 4 new language translations
-
-## 👨‍🏫 Next workshop: Verona, Italy 🇮🇹, April 20th. [Tickets and more info here](https://2022.jsday.it/workshop/nodejs_testing.html)
+# 👇 Чому цей гайд може поліпшити ваші технічні навички до вищого рівня
 
 <br/>
 
+## 📗 50+ найліпших практик: дуже комплексно та вичерпно
 
+Це гайд по безпеці JavaScript та Node.js від А до Я. Він підсумовує та надає низку найкращих постів, книжок та інструментів, що наразі пропонує ринок.
 
-# 👇 Why this guide can take your testing skills to the next level
+## 🚢 Продвинутий: На 10,000 миль поглиблює основи
 
-<br/>
+Приєднуйтесь до подорожі від основ до поглиблених тем тестування в продакшені, мутаційних тестувань, property-based тестувань та багато інших різноманітних професійних інструментів. Якщо ви уважно перечитаєте кожну строчку в цьому гайді, ваш рівень тестування скоріш за все стане набагато вищий за середній.
 
-## 📗 50+ best practices: Super-comprehensive and exhaustive
+## 🌐 Full-stack: front, backend, CI, що завгодно.
 
-This is a guide for JavaScript & Node.js reliability from A-Z. It summarizes and curates for you dozens of the best blog posts, books and tools the market has to offer
-
-## 🚢 Advanced: Goes 10,000 miles beyond the basics
-
-Hop into a journey that travels way beyond the basics into advanced topics like testing in production, mutation testing, property-based testing and many other strategic & professional tools. Should you read every word in this guide your testing skills are likely to go way above the average
-
-## 🌐 Full-stack: front, backend, CI, anything
-
-Start by understanding the ubiquitous testing practices that are the foundation for any application tier. Then, delve into your area of choice: frontend/UI, backend, CI or maybe all of them?
+Почніть з розуміння розповсюджених практик тестування, які є основами для програм любого рівня. Потім можете поглибитись в будь-яку сферу за власним бажанням: frontend/UI, backend, CI чи може навіть все разом?
 
 <br/>
 
-### Written By Yoni Goldberg
+### Підготував Yoni Goldberg
 
-- A JavaScript & Node.js consultant
-- 📗 [Testing Node.js & JavaScript From A To Z](https://www.testjavascript.com) - My comprehensive online course with more than [7 hours of video](https://www.testjavascript.com), 14 test types and more than 40 best practices
-- [Follow me on Twitter](https://twitter.com/goldbergyoni/)
+- JavaScript & Node.js консультант
+- 📗 [Testing Node.js & JavaScript From A To Z](https://www.testjavascript.com) - Мій онлайн курс на більш ніж [7 годин відео](https://www.testjavascript.com), 14 типів тестів та більш ніж 40 найкращих практик. 
+- [Мій Twitter](https://twitter.com/goldbergyoni/)
 - [Next workshop: Verona, Italy 🇮🇹, April 20th](https://2022.jsday.it/workshop/nodejs_testing.html)
 
 <br/>
 
-### Translations - read in your own language
+### Переклади - читайте на вашій рідній мові
 
 - 🇨🇳[Chinese](readme-zh-CN.md) - Courtesy of [Yves yao](https://github.com/yvesyao)
 - 🇰🇷[Korean](readme.kr.md) - Courtesy of [Rain Byun](https://github.com/ragubyun)
@@ -49,11 +39,11 @@ Start by understanding the ubiquitous testing practices that are the foundation 
 
 <br/><br/>
 
-## `Table of Contents`
+## `Зміст`
 
-#### [`Section 0: The Golden Rule`](#section-0️⃣-the-golden-rule)
+#### [`Розділ 0: Золоте правило`](#розділ-0️⃣-золоте-правило)
 
-A single advice that inspires all the others (1 special bullet)
+Єдина порада, що надихає всі інші (1 спеціальний пункт)
 
 #### [`Section 1: The Test Anatomy`](#section-1-the-test-anatomy-1)
 
@@ -77,26 +67,26 @@ Guidelines for CI in the JS world (9 bullets)
 
 <br/><br/>
 
-# Section 0️⃣: The Golden Rule
+# Розділ 0️⃣: Золоте правило
 
 <br/>
 
-## ⚪️ 0 The Golden Rule: Design for lean testing
+## ⚪️ 0 Золоте правило: Проектуйте для простого тестування
 
 :white_check_mark: **Do:**
-Testing code is not production-code - Design it to be short, dead-simple, flat, and delightful to work with. One should look at a test and get the intent instantly.
+Тести це не продакшн код - проектуйте їх так, щоб вони були стислі, максимально прості, послідовні та приємні в роботі. Одного погляду на тест повиннно бути достатньо, щоб зрозуміти його призначення. 
 
-See, our minds are already occupied with our main job - the production code. There is no 'headspace' for additional complexity. Should we try to squeeze yet another sus-system into our poor brain it will slow the team down which works against the reason we do testing. Practically this is where many teams just abandon testing.
+Річ у тому, що наш розум вже зайнятий основною задачаю - кодом. В нас не так багато ресурсів на додаткову складність. Якщо ми спробуємо втиснути ще якусь складну систему в наш втомлений мозок, то це тільки вповільнить команду, що, звичайно, прямо протилежний ефект від тестування. На практиці ж це саме той етап, коли багато команд забивають на тести.
 
-The tests are an opportunity for something else - a friendly assistant, co-pilot, that delivers great value for a small investment. Science tells us that we have two brain systems: system 1 is used for effortless activities like driving a car on an empty road and system 2 which is meant for complex and conscious operations like solving a math equation. Design your test for system 1, when looking at test code it should _feel_ as easy as modifying an HTML document and not like solving 2X(17 × 24).
+Тести це можливість спробувати щось нове - це ваш помічник, другий пілот, що дає великий зиск при малих вкладах. Наука каже, що в нас є дві мозкові системи: система 1 для дій без додаткових зусіль, як то водиння машини на порожній трасі, та система 2 для важких задач як розв'язання складних математичних рівнянь. Проектуйте свої тести для системи 1, коли один погляд на код _відчувається_ так же легко, як правка HTML, а не як розв'язання 2X(17 × 24).
 
-This can be achieved by selectively cherry-picking techniques, tools and test targets that are cost-effective and provide great ROI. Test only as much as needed, strive to keep it nimble, sometimes it's even worth dropping some tests and trade reliability for agility and simplicity.
+Цього можна досягти, вибірково використовуючи техніки, інструменти та цілі тестування, які є ефективними та мають великий ROI. Тестуйте рівно стільки, скільки це необхідно, намагайтесь робити це оперативно. Іноді навіть варто пропустити якісь тести та знехтувати надійністю заради швидкості та простоти. 
 
-![alt text](/assets/headspace.png "We have no head room for additional complexity")
+![alt text](/assets/headspace.png "В нас немає місця для додаткової складності")
 
-Most of the advice below are derivatives of this principle.
+Більшість порад нижче це похідні від цього принципу. 
 
-### Ready to start?
+### Готові почати?
 
 <br/><br/>
 
