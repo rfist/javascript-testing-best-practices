@@ -90,34 +90,34 @@ Guidelines for CI in the JS world (9 bullets)
 
 <br/><br/>
 
-# Section 1: The Test Anatomy
+# Розділ 1: Анатомія Тестування
 
 <br/>
 
-## ⚪ ️ 1.1 Include 3 parts in each test name
+## ⚪ ️ 1.1 Додайте 3 складові в назву теста
 
-:white_check_mark: **Do:** A test report should tell whether the current application revision satisfies the requirements for the people who are not necessarily familiar with the code: the tester, the DevOps engineer who is deploying and the future you two years from now. This can be achieved best if the tests speak at the requirements level and include 3 parts:
+:white_check_mark: **Do:** У звіті тесту повинно бути зазначено, чи відповідає поточна версія програми вимогам людей, які не обов’язково знайомі з кодом: тестувальники, інженери DevOps, та майбутні ви через два роки. Цього можна легко досягти, якщо тести відповідають вимогам і включають 3 частини:
 
-(1) What is being tested? For example, the ProductsService.addNewProduct method
+(1) Що було протестовано? Наприклад, метод ProductsService.addNewProduct
 
-(2) Under what circumstances and scenario? For example, no price is passed to the method
+(2) За яких обставин і яким сценарієм? Наприклад, аргумент price не був переданий методу
 
-(3) What is the expected result? For example, the new product is not approved
-
-<br/>
-
-❌ **Otherwise:** A deployment just failed, a test named “Add product” failed. Does this tell you what exactly is malfunctioning?
+(3) Який очікуваний результат? Наприклад, новий товар не був прийнятий методом. 
 
 <br/>
 
-**👇 Note:** Each bullet has code examples and sometime also an image illustration. Click to expand
+❌ **Otherwise:** Деплой впав, тест "Add product" повернув помилку. Чи це достатньо інформації для вас, щоб зрозуміти проблему?
+
 <br/>
 
-<details><summary>✏ <b>Code Examples</b></summary>
+**👇 Note:** Кожен пункт має приклади коду, іноді з картинкою. Натисніть, щоб розгорнути.
+<br/>
+
+<details><summary>✏ <b>Приклад коду</b></summary>
   
 <br/>
   
-### :clap: Doing It Right Example: A test name that constitutes 3 parts
+### :clap: Правильний приклад: тест з трьома складовими
 
 ![](https://img.shields.io/badge/🔨%20Example%20using%20Mocha-blue.svg "Using Mocha to illustrate the idea")
 
@@ -137,7 +137,7 @@ describe('Products Service', function() {
 
 <br/>
 
-### :clap: Doing It Right Example: A test name that constitutes 3 parts
+### :clap: Правильний приклад: тест з трьома складовими
 
 ![alt text](/assets/bp-1-3-parts.jpeg "A test name that constitutes 3 parts")
 
@@ -150,7 +150,7 @@ describe('Products Service', function() {
 
 <br/><br/>
 
-## ⚪ ️ 1.2 Structure tests by the AAA pattern
+## ⚪ ️ 1.2 Структуруйте тести за AAA патерном
 
 :white_check_mark: **Do:** Structure your tests with 3 well-separated sections Arrange, Act & Assert (AAA). Following this structure guarantees that the reader spends no brain-CPU on understanding the test plan:
 
